@@ -82,3 +82,5 @@ class Persona {
     return edad;
   }
 }
+
+module.exports = Persona;
