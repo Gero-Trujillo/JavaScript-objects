@@ -1,7 +1,9 @@
 const Persona = require('./Persona.js')
 
 class Estudiante extends Persona {
-    constructor(nombre, edad, fecNacimiento){
+    #grado = "";
+    constructor(nombre, edad, fecNacimiento, grado){
         super(nombre, edad, fecNacimiento);
+        this.#grado = grado;
     }
 }
