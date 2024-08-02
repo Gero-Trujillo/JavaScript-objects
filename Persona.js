@@ -8,24 +8,60 @@ class Persona {
     this.#fecNacimiento = fecNacimiento;
   }
 
-  establecerNombre(nombre){
+  establecerNombre(nombre) {
+    if (typeof nombre !== "string") {
+      console.error("El nombre debe ser un texto");
+      return;
+    }
+    if (nombre === "") {
+      console.error("El nombre no puede estar vacío");
+      return;
+    }
     this.#nombre = nombre;
   }
-  obtenerNombre(){
-    return this.#nombre;
+  obtenerNombre() {
+    if (this.#nombre === ""){
+        console.error("El nombre no puede estar vacío");
+        return
+    }
+        return this.#nombre;
   }
 
-  establecerEdad(edad){
+  establecerEdad(edad) {
+    if(edad.typeof !== "number") {
+      console.error("La edad debe ser un número");
+      return
+    }
+    if (edad < 0) {
+      console.error("La edad no puede ser menor a 0");
+      return;
+    }
     this.#edad = edad;
   }
-  obtenerEdad(){
+  obtenerEdad() {
+    if (this.#edad < 0) {
+      console.error("La edad no puede ser menor a 0");
+        return;
+    }
     return this.#edad;
   }
 
-  establecerFecNacimiento(fecNacimiento){
+  establecerFecNacimiento(fecNacimiento) {
+    if (typeof fecNacimiento !== "string") {
+      console.error("La fecha de nacimiento debe ser un texto");
+      return;
+    }
+    if (fecNacimiento === "") {
+      console.error("La fecha de nacimiento no puede estar vacía");
+      return;
+    }
     this.#fecNacimiento = fecNacimiento;
   }
-  obtenerFecNacimiento(){
+  obtenerFecNacimiento() {
+    if (this.#fecNacimiento === ""){
+        console.error("La fecha de nacimiento no puede estar vacía");
+        return
+    }
     return this.#fecNacimiento;
   }
 }
