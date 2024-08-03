@@ -4,3 +4,24 @@ class Empleado{
         this.salario = salario;
     }
 }
+
+class Gerente extends Empleado{
+    constructor(nombre, salario, bono){
+        super(nombre, salario);
+        this.bono = bono;
+    }
+}
+
+class Vendedor extends Empleado{
+    constructor(nombre, salario, comision){
+        super(nombre, salario);
+        this.comision = comision;
+    }
+}
+
+class Mensajero extends Empleado{
+    constructor(nombre, salario, subsidio){
+        super(nombre, salario);
+        this.subsidio = subsidio;
+    }
+}
