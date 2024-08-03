@@ -42,3 +42,25 @@ class FiguraGeometrica{
         return this.#color;
     }
 }
+
+class Cuadrado extends FiguraGeometrica{
+    constructor(nombre, color, lado){
+        super(nombre, color);
+        this,lado = lado;
+    }
+}
+
+class Circulo extends FiguraGeometrica{
+    constructor(nombre, color, radio){
+        super(nombre, color);
+        this.radio = radio;
+    }
+}
+
+class Rectangulo extends FiguraGeometrica{
+    constructor(nombre, color, base, altura){
+        super(nombre, color);
+        this.base = base;
+        this.altura = altura;
+    }
+}
