@@ -48,12 +48,24 @@ class Cuadrado extends FiguraGeometrica{
         super(nombre, color);
         this,lado = lado;
     }
+    calcularArea(){
+        return this.lado * this.lado;
+    }
+    calcularPerimetro(){
+        return this.lado * 4;
+    }
 }
 
 class Circulo extends FiguraGeometrica{
     constructor(nombre, color, radio){
         super(nombre, color);
         this.radio = radio;
+    }
+    calcularArea(){
+        return Math.PI * Math.pow(this.radio, 2);
+    }
+    calcularPerimetro(){
+        return 2 * Math.PI * this.radio;
     }
 }
 
@@ -62,5 +74,11 @@ class Rectangulo extends FiguraGeometrica{
         super(nombre, color);
         this.base = base;
         this.altura = altura;
+    }
+    calcularArea(){
+        return this.base * this.altura;
+    }
+    calcularPerimetro(){
+        return 2 * this.base + 2 * this.altura;
     }
 }
