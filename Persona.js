@@ -6,6 +6,9 @@ class Persona {
     this.#nombre = nombre;
     this.#edad = edad;
     this.#fecNacimiento = fecNacimiento;
+    if (this.realizarTarea === undefined) {
+      throw new Error("Debe implementar el método realizarTarea");
+    }
   }
 
   establecerNombre(nombre) {
@@ -81,6 +84,12 @@ class Persona {
     }
     return edad;
   }
+  realizarTarea() {
+    console.log("Realizando tarea laboral")
+  }
 }
+
+const persona = new Persona("Juan", 20, "2000-01-01");
+console.log(persona.realizarTarea())
 
 module.exports = Persona;
