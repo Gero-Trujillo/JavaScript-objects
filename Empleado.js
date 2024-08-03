@@ -30,4 +30,7 @@ class Mensajero extends Empleado{
         super(nombre, salario);
         this.subsidio = subsidio;
     }
+    calcularSalario(){
+        return this.salario + this.subsidio;
+    }
 }
