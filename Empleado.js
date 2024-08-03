@@ -10,6 +10,9 @@ class Gerente extends Empleado{
         super(nombre, salario);
         this.bono = bono;
     }
+    calcularSalario(){
+        return this.salario + this.bono;
+    }
 }
 
 class Vendedor extends Empleado{
