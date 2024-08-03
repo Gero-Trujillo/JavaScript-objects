@@ -20,6 +20,9 @@ class Vendedor extends Empleado{
         super(nombre, salario);
         this.comision = comision;
     }
+    calcularSalario(){
+        return this.salario + this.comision;
+    }
 }
 
 class Mensajero extends Empleado{
